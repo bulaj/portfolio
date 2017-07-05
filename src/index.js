@@ -1,0 +1,24 @@
+import React from 'react';
+import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+
+import application from './reducers';
+
+import App from './App/App';
+
+import './styles/app.css';
+
+/* eslint-disable no-underscore-dangle */
+const store = createStore(
+    application, /* preloadedState, */
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+/* eslint-enable */
+
+render(
+    <Provider store={store}>
+        <App/>
+    </Provider>,
+    document.getElementById('app')
+);
