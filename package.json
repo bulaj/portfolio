@@ -1,0 +1,11 @@
+{
+  "name": "bulis-portfolio",
+  "version": "0.0.1",
+  "description": "buli's portfolio",
+  "main": "index.html",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "buli",
+  "license": "ISC"
+}
