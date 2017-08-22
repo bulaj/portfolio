@@ -1,19 +1,24 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
 import styled from 'styled-components';
+import theme from '../styles/theme';
 
 export const StyledHeading = styled.h1`
     font-size: 200px;
     font-weight: 300;
     text-align: center;
-    color: #fff;
+    color: ${props => props.theme.colors.secondary};
 
     &:hover {
         color: #ccc;
     }
 `;
 
-export default class Heading extends Component {
+export default class Heading extends PureComponent {
+
+    static defaultProps = {
+        theme: theme,
+    };
 
     render() {
         const {children} = this.props;

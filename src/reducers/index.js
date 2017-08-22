@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+import Sections from '../containers/Sections/redux';
 
 const personalDataObj = {
     name: 'some_name',
@@ -16,6 +17,7 @@ const personalData = (state = initialState, action) => {
 
 const application = combineReducers({
     personalData,
+    Sections,
 });
 
 export default application;

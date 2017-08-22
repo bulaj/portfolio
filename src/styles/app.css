@@ -6,7 +6,18 @@
 
 body {
     background-color: #fff;
+    margin-top: 20px;
     /*background-color: #066295;*/
     /*background-color: #056194;*/
     font-family: Helvetica, Arial, sans-serif!important;
+}
+
+body, html {
+    height: 100%;
+    display: grid;
+}
+
+#app {
+    margin: auto 0;
+    position: relative;
 }

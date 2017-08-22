@@ -8,7 +8,7 @@ export default class FormattedMessage extends Component {
         const text = locale[id];
 
         return (
-            <div>{text}</div>
+            <span>{text}</span>
         );
     }
 

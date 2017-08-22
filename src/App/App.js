@@ -1,7 +1,9 @@
 import React, {PureComponent} from 'react';
 import {connect} from 'react-redux';
+import {ThemeProvider} from 'styled-components';
+import theme from '../styles/theme';
+import Sections from '../containers/Sections/Sections';
 
-import Heading from '../components/Heading';
 import TopBar from '../components/TopBar';
 
 @connect(state => {
@@ -13,10 +15,12 @@ export default class App extends PureComponent {
 
     render() {
         return (
-            <div>
-                <TopBar/>
-                <Heading>Hello world!</Heading>
-            </div>
+            <ThemeProvider theme={theme}>
+                <div>
+                    <TopBar/>
+                    <Sections/>
+                </div>
+            </ThemeProvider>
         );
     }
 
